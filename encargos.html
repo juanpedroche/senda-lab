@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Codificación: permite tildes y eñes -->
+    <meta charset="UTF-8">
+    <!-- Adapta el ancho de la página al móvil -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pide una pieza para tu MTB diseñada a medida.">
+    <!-- IDENTIFICACIÓN: título de la pestaña del navegador -->
+    <title>Encargos | Senda Lab</title>
+</head>
+<body>
+
+    <!-- ===== CABECERA: igual en todas las páginas ===== -->
+    <header>
+        <!-- IDENTIFICACIÓN + NAVEGACIÓN: el logo vuelve a la portada -->
+        <a href="index.html">
+            <img src="img/logo.png" alt="Logotipo de Senda Lab" width="120" height="60">
+        </a>
+        <h1>Senda Lab</h1>
+        <p>Piezas para MTB diseñadas e impresas en 3D</p>
+
+        <!-- NAVEGACIÓN: menú principal, mismo orden en todas las páginas -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="encargos.html">Encargos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p><a href="index.html">Inicio</a> &gt; Encargos</p>
+
+        <h2>Piezas a medida</h2>
+
+        <!-- CONTENIDO: lista ordenada porque los pasos van en orden -->
+        <section>
+            <h3>Cómo funciona</h3>
+            <ol>
+                <li>Me cuentas qué pieza necesitas y para qué bici.</li>
+                <li>Te envío un presupuesto en 48 horas.</li>
+                <li>Diseño la pieza en CAD y la imprimo.</li>
+                <li>Te la envío a casa o te paso el STL.</li>
+            </ol>
+        </section>
+
+        <!-- INTERACCIÓN: formulario de presupuesto -->
+        <section>
+            <h3>Pide tu presupuesto</h3>
+            <form action="#" method="post">
+                <!-- Cada campo lleva su <label>; el "for" coincide con el "id" -->
+                <p>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="bici">Marca y modelo de tu bici</label>
+                    <input type="text" id="bici" name="bici">
+                </p>
+                <p>
+                    <!-- Menú desplegable -->
+                    <label for="tipo">Tipo de pieza</label>
+                    <select id="tipo" name="tipo">
+                        <option value="soporte">Soporte</option>
+                        <option value="protector">Protector</option>
+                        <option value="guardabarros">Guardabarros</option>
+                        <option value="otro">Otra</option>
+                    </select>
+                </p>
+                <!-- Botones de opción: solo se marca uno (mismo "name") -->
+                <fieldset>
+                    <legend>¿Qué quieres recibir?</legend>
+                    <input type="radio" id="impresa" name="formato" value="impresa">
+                    <label for="impresa">Pieza impresa</label>
+                    <input type="radio" id="stl" name="formato" value="stl">
+                    <label for="stl">Archivo STL</label>
+                </fieldset>
+                <p>
+                    <label for="descripcion">Describe la pieza (medidas, uso…)</label>
+                    <textarea id="descripcion" name="descripcion" rows="5" cols="40"></textarea>
+                </p>
+                <p>
+                    <!-- Casilla de verificación -->
+                    <input type="checkbox" id="privacidad" name="privacidad" required>
+                    <label for="privacidad">Acepto la política de privacidad</label>
+                </p>
+                <button type="submit">Enviar solicitud</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- ===== PIE: igual en todas las páginas ===== -->
+    <footer>
+        <!-- IDENTIFICACIÓN: propietario del sitio -->
+        <p>&copy; 2026 Senda Lab. Todos los derechos reservados.</p>
+        <!-- NAVEGACIÓN secundaria -->
+        <p><a href="contacto.html">Contacto</a></p>
+    </footer>
+
+</body>
+</html>
